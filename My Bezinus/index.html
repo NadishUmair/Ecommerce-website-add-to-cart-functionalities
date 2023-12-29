@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bezinus Template</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+     <script src="script.js" defer></script>
+     <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <!-- ########################### nav bar ########################### -->
+    <header id="header" class="sticky top-0 z-50">
+       <div class="nav-top  bg-black text-white p-5 flex flex-wrap justify-center items-center">
+             <button class="bg-[#eb5757;] px-4 py-1 rounded-2xl">Announcement</button>
+             <p class="ml-3 text-lg">How we're responding to COVID-19</p>
+       </div>
+       <nav class="nav-bar relative flex bg-[#eb5757] justify-between   py-3">
+           <img class="ml-4" src="	https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e7ff57adad44d1f072965b6_logo.svg" alt="Logo">
+            
+           <div class="flex flex-wrap items-center list-none text-white text-base font-bold relative bg-gray-light p-2">
+            <li class="hidden ml-10 hover:bg-black px-2 py-1 rounded-lg ease-in-out duration-300 lg:block "><a href="">Home</a></li>
+            <li class="hidden ml-10 hover:bg-black px-2 py-1 rounded-lg ease-in-out duration-300 lg:block "><a href="">About</a></li>
+            <li class="hidden ml-10 hover:bg-black px-2 py-1 rounded-lg ease-in-out duration-300 lg:block "><a href="">Shop</a></li>
+            <li class="hidden ml-10 hover:bg-black px-2 py-1 rounded-lg ease-in-out duration-300 lg:block "><a href="">Donate</a></li>
+            <li class="hidden ml-10 mr-10 hover:bg-black px-2 py-1 rounded-lg ease-in-out duration-300 lg:block "><a href="">Contact</a></li>
+            <li class="mr-14 lg:mr-4 bg-black px-4 py-1 rounded-lg cursor-pointer" id="cartbutton"><i class="fa fa-shopping-cart" ></i>
+            <span class="bg-white text-black rounded-full px-2   text-xs absolute top-0 right-14 lg:right-4 inline-block " id="cartno">0</span>
+            </li>
+         <li id="menu" class="z-50 lg:hidden  absolute top-2 right-4 py-1 px-3"><i class="fa fa-bars " ></i></li>
+        </div>
+        <div id="menuitems" class="absolute top-0 w-full z-30 bg-[#eb5757] hidden lg:hidden py-5">
+            <li class="list-none text-center mt-7 text-2xl text-white font-bold hover:bg-black p-2"><a href="">Home</a></li>
+            <li class="list-none text-center mt-7 text-2xl text-white font-bold hover:bg-black p-2"><a href="">About</a></li>
+            <li class="list-none text-center mt-7 text-2xl text-white font-bold hover:bg-black p-2"><a href="">Shop</a></li>
+            <li class="list-none text-center mt-7 text-2xl text-white font-bold hover:bg-black p-2"><a href="">Donate</a></li>
+            <li class="list-none text-center mt-7 text-2xl text-white font-bold hover:bg-black p-2"><a href="">Contact</a></li>
+            </div>
+
+          <!-- ###########################  add to cart ########################### -->
+            <section class="absolute w-full top-16 z-50 hidden" id="cartpage">
+                <div class= " bg-white absolute w-full h-auto p-4   lg:p-8 top-0 flex  justify-between " >
+                   <div class="  lg:w-[65%]">
+                       <div class="lg:flex justify-between items-center w-full  ">
+                           <div class="  lg:w-[55%]">
+                               <label for="">Slect Item:</label>
+                               <select name="" id="select-item" class="py-4 px-8 w-full lg:w-4/5" >
+                                <option  id="optionselect">select item</option>
+                                   <option value="20">Item1</option>
+                                   <option value="13">Item2</option>
+                                   <option value="40">Item3</option>
+                                   <option value="23">Item4</option>
+                                   <option value="43">Item5</option>
+                                   <option value="8">Item6</option>
+                               </select>
+                           </div>
+                           <div class="mt-4 lg:mt-0 border-2 border-black   lg:w-[20%]" >
+                               $ <span id="update-value">0</span>
+                           </div>
+                           <div class="mt-4 lg:mt-0 flex items-center justify-between text-center text-2xl lg:w-[20%] h-12">
+                               <div class=" bg-red-600  basis-[32%] cursor-pointer" id="minus">-</div>
+                               <div class="border border-blue-300 basis-[32%] cursor-pointer text-center " id="itm-numbers">0</div>
+                               <div class=" bg-green-600 hover:bg-green-400 basis-[32%] cursor-pointer" id="plus">+</div>
+                           </div>
+                       </div>
+                       <button class="mb-4 mt-8 py-1 px-5 lg:py-3 lg:px-10 bg-[green] text-white font-semibold hover:bg-black" id="addTocart">Add To Cart</button>
+                       </div>
+                   
+                     <div class="border-2 border-black lg:w-[30%] h-[full] p-2" id="addedItems">
+                             <h1>Added Items</h1>
+                     </div>
+                   </div>
+           </div>
+       </section>
+
+
+
+
+        </nav>
+       
+    </header>
+      <!-- ########################### hero Section ########################### -->
+    <div class="flex flex-col relative justify-end lg:justify-center  h-[85vh] bg-no-repeat bg-center bg-cover" style="background-image:linear-gradient(360deg, #222, rgba(34, 34, 34, 0)),url(./assests/images/hero-bg.jpg);">
+         <div class="mb-5 ml-6     lg:ml-12 text-white md:w-1/2 lg:w-4/12 ">
+            <h1 class="text-3xl  lg:text-6xl font-bold leading-tight">Serving you <br> since 1989.</h1>
+            <p class="my-6 lg:text-xl">Acme Outdoors is an outdoor and adventure shop located in the Boathouse District in Oklahoma City.</p>
+            <button class="border px-5 py-1 text-base font-bold rounded-md hover:bg-white hover:text-black ease-in-out duration-500">Shop Merch</button>
+         </div>
+         </div>
+        
+
+ <div class="p-4 lg:p-10">
+    <div class="flex flex-wrap justify-between ">
+        <div class="w-1/2">
+            <h6 class="uppercase">Ways to support</h6>
+            <h1 class="text-4xl font-bold">Support Acme Outdoors.</h1>
+        </div>
+        <div class="mt-4 lg:mt-0 lg:w-1/2">
+            <p>
+                COVID-19 has forced us to close our retail space, but we need support from patrons like yourself now more than ever. Below, we’ve listed the best ways to help us through this season.
+            </p>
+        </div>
+    </div>
+
+       <!-- ########################### support section ###########################  -->
+    <div class="flex flex-wrap mt-10 justify-between">
+        <div class="mt-5  lg:w-[30%]  ">
+           <div class="bg-black rounded-md text-white relative flex items-center overflow-hidden" style="min-height: 350px;">
+            <h2 class="text-4xl font-bold absolute top-8 left-4">01</h2>
+            <h1 class=" text-3xl font-bold w-full text-center">SHOP PRODUCTS</h1>
+            <img src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e7ff57a5836db2a07bab0e3_Circle.svg" alt="" class="absolute w-44 left-auto top-auto -right-20 -bottom-24">
+           </div>
+         <p class="mt-8">Our full product line is still available online here on our site! Getting outside and hiking is still something you can do. Get your gear now!</p>
+        </div>
+       
+        <div class="mt-5   lg:w-[30%]">
+            <div class="bg-black rounded-md text-white relative  flex items-center overflow-hidden " style="min-height: 350px;">
+                <h2 class="text-4xl font-bold absolute top-8 left-4">02</h2>
+                <h1 class="text-3xl font-bold w-full text-center ">Donate</h1> 
+                <img src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e7ff57adc54453434efb9ee_Triangle.svg" alt="" class="absolute w-40 left-auto top-auto -right-6 -bottom-10">
+            </div>
+            <p class="mt-8">Since we've changed the way we operate to online only, and to ensure your safety, not all our staff is working. Donate to keep them afloat.</p>
+            
+        </div>
+        <div class="mt-5 lg:w-[30%] ">
+            <div class="bg-black rounded-md text-white relative flex items-center overflow-hidden" style="min-height: 350px;">
+                <h2 class="text-4xl font-bold absolute top-8 left-4">03</h2>
+            <h1 class=" text-3xl font-bold w-full text-center  ">Buy <br>  GIFT CARDS</h1>
+            <img src="	https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e7ff57afea9a31a44d66db0_Rectangle.svg" alt="" class="absolute w-96 left-auto top-auto bg-black -right-36 -bottom-9 h-32">
+            </div>
+             <p class="mt-8">Have all the outdoor gear you need for now? Buy a gift card and use it later or share it with friends and family. </p>
+        </div>
+    </div>
+</div>
+    
+   <!-- ###########################   Statement about covid-19 ########################### -->
+<div class="flex flex-col justify-end lg:justify-center items-end  mt-8 h-[75vh] bg-no-repeat bg-cover bg-center   pr-4 lg:pr-8 pb-8" style="background-image: linear-gradient(180deg, rgba(34, 34, 34, 0.17), #222),url(./assests/images/statement-bg.jpg);">
+    <!-- <div class="text-right w-[45%] mr-8 border"> -->
+        <h1 class="text-white text-3xl sm:w-[100%] text-right    lg:w-[50%]  lg:text-5xl font-bold ">How we're keeping you safe during COVID-19</h1>
+        <p class="text-white text-sm text-right w-[70%] lg:w-[30%]   mt-6 mb-6 lg:text-lg ">As an outdoor shop, we’ve taken precautionary measures to ensure the safety of all our customers and team members.</p>
+        <button class=" bg-white text-black py-2 px-5 rounded-lg font-semibold hover:bg-black hover:text-white ease-in-out duration-500">Read Our Statement</button>
+    <!-- </div> -->
+</div>
+   
+
+  <!-- ########################### Shop Products ########################### -->
+ <div class="p-4 lg:p-10">
+    
+    <p class="uppercase text-lg">shop products</p>
+    <h1 class="text-5xl font-bold">Open 24/7/365.</h1>
+ 
+  <div class="lg:flex flex-wrap  justify-between mt-5">
+    <div class="lg:w-[32%] ">
+      <div class="h-[420px] bg-no-repeat bg-cover bg-center rounded-lg" style="background-image: url(./assests/images/product1.jpg);"></div>
+      <div class="text-center  mt-4">
+        <h3 class="text-xl font-normal">Yellow Tent</h3>
+        <h6 class="font-semibold text-sm">$ 200.00 USD</h6>
+        <button class="bg-[#eb5757] text-white font-semibold px-6 py-1 mt-4 rounded-md hover:bg-black ease-in-out duration-500">Details</button>
+      </div>
+    </div>
+
+    <div class="mt-4 mb-4 lg:mb-0 lg:mt-0 lg:w-[32%] ">
+        <div class="h-[420px] bg-no-repeat bg-cover bg-center rounded-lg" style="background-image: url(./assests/images/product2.jpg);"></div>
+        <div class="text-center  mt-4">
+          <h3 class="text-xl font-normal">Tin Coffee Tumbler</h3>
+          <h6 class="font-semibold text-sm">$ 35.00 USD</h6>
+          <button class="bg-[#eb5757] text-white font-semibold px-6 py-1 mt-4 rounded-md hover:bg-black ease-in-out duration-500">Details</button>
+        </div>
+    </div>
+    <div class="lg:w-[32%]">
+        <div class="h-[420px] bg-no-repeat bg-cover bg-center rounded-lg" style="background-image: url(./assests/images/product3.jpg);"></div>
+        <div class="text-center mt-4" >
+          <h3 class="text-xl font-normal">Black Canvas Pack</h3>
+          <h6 class="font-semibold text-sm">$ 95.00 USD <span class="text-red-500 line-through ml-1 font-semibold">$ 145.00 USD</span></h6>
+          <button class="bg-[#eb5757] text-white font-semibold px-6 py-1 mt-4 rounded-md hover:bg-black ease-in-out duration-500">Details</button>
+        
+        </div>
+    </div>
+</div>
+
+       <!-- ########################### Shop Local ########################### -->
+     <div class="text-center w-full mt-10">
+        <button class="bg-black text-white py-1 px-6 font-semibold rounded-md hover:bg-[#eb5757]">View All Products</button>
+    </div>
+  </div>
+   <div class="mt-24 lg:p-8 relative ">
+    <div class="h-[400px]  lg:w-[30%] lg:absolute top-16 bg-no-repeat bg-center bg-cover lg:rounded-lg" style="background-image: url(./assests/images/local-shop.jpg);">
+        
+    </div>
+       <div class="order-2 bg-black text-white lg:w-[80%] p-10 lg:ml-[20%] flex flex-col justify-center items-end lg:rounded-lg">
+         <div class=" lg:w-1/2 lg:mr-[10%]">
+            <h1 class="text-5xl font-bold">Shop Local.</h1>
+            <p class="mt-4">We know that during COVID-19, a lot of folks around the city and state are feeling uneasy about the future - we’re not sure what the future holds either. <br> <br>
+
+                That said: we know that we love making sure you have the gear you need for your adventures, and we’re going to keep doing that - with our team - until the city tells us we can’t. <br> <br>
+                
+                But as long as folks like yourself support small businesses around the city, then we’ll be here — every day, making sure your orders arrive on time. <br><br>
+                -------</p>
+                <h2>Jane & John Doe</h2>
+                <h2 class="font-semibold">Acme Outdoors</h2>
+         </div>
+       </div>
+       
+   </div>
+
+<!-- ############################ footer ########################### -->
+<footer class="bg-black p-6">
+    <div class="flex flex-wrap justify-between mt-4">
+        <div><img src="	https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e7ff57adad44d1f072965b6_logo.svg" alt=""></div>
+        <div class="">
+           <a href=""><i class="fa fa-twitter-square  fa-2x mr-3 text-white px-1 rounded-lg hover:text-slate-300 ease-in-out duration-500"></i></a>
+           <a href="" class=""><i class="fa fa-facebook-square fa-2x mr-3 px-2 text-white pt-1 pb-0 rounded-full hover:text-slate-300 ease-in-out duration-500"></i></a>
+           <a href=""><i class="fa  fa-instagram  fa-2x mr-3  text-white hover:text-slate-300 ease-in-out duration-500 "></i></a>
+        </div>
+        
+    </div>
+    <p class="text-white text-center mt-8 text-xs">Made In <a href=" " class="text-[#eb5757]">Webflow</a>.© 2020.</p>
+</footer>
+</body>
+</html>

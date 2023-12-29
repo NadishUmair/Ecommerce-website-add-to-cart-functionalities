@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.item-container{
+    display: flex;
+    align-items: center;
+}
+
+@media(max-width:762px){
+    .item-container{
+        font-size: 0.8rem;
+        margin-top: 0.8rem;
+    }
+
+}
+.buttonstyle{
+    margin-left: 1rem;
+    font-size: 0.8rem;
+    
+    text-transform: uppercase;
+    padding: 0.1rem 1rem;
+    background-color: rgb(0, 213, 255);
+    color: white;
+}
